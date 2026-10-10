@@ -1,4 +1,4 @@
-""" combo workouts by time"""
+""" strength workouts by time"""
 
 strength_wo_15 = [
     {"AMRAP": "5 pull-ups, 10 push-ups, 15 squats"},
