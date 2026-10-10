@@ -7,7 +7,7 @@ command-line interface for the user to interact with the workkout app
 WO_FOCUS_LIST= ["strength", "cardio", "combo"]
 
 MIN_MINUTES = 15
-MAX_MINUTES = 120
+MAX_MINUTES = 60
 
 BACK_COMMAND = "b"
 QUIT_COMMAND = "q"
@@ -43,7 +43,7 @@ def get_wo_duration():
     """
         asks for user for how many minutes they have available to workout until valid input is entered
         - returns
-            - int: number of minutes user has to workout out (15-120 min)
+            - int: number of minutes user has to workout out (15-60 min)
             - BACK: user wants to return to focus menu
             - QUIT: user wants to quit the program
     """
@@ -66,7 +66,7 @@ def get_wo_duration():
             print(f"\nyou have {minutes} minutes available to workout.")
             return minutes
 
-        print("invalid input. please enter a whole number between 15 and 120, or 'b' to go back, or 'q' to quit.")
+        print("invalid input. please enter a whole number between 15 and 60, or 'b' to go back, or 'q' to quit.")
         
 
 def main():
