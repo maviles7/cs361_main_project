@@ -11,7 +11,6 @@ strength_wo_30 = [
 strength_wo_45 = [
     {"classic": "set A (4 rounds - 90 sec recovery) 8 barbell back squats; set B (3 rounds - 90 sec roververy) 8 military press; set C (3 rounds - 90 sec recovery) 8 barbell deadlift; set D (3 rounds - 90 sec recovery) 10 rows; set E (3 rounds - 30 sec recovery) 12 hanging leg raises "},
 ] 
-
 strength_wo_60 = [
     {"full-body": "set A (4 sets - 120 sec recovery) 6 barbell back squat; set B (4 set - 120 sec recovery) 6 chest press; set C (3 sets - 150 sec recovery) 5 barbell deadlifts; set D (3 sets - 90 sec recovery) 16 bulgrian split squats, 16 single-arm row; set E (3 sets - 90 sec recovery) 10 miltary press, 8 pull-ups"},
 ] 

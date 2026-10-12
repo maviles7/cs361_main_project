@@ -9,10 +9,10 @@ from workouts import cardio, combo, strength_weight
 
 WORKOUTS = {
     "strength": {
-        15: strength.strength_wo_15,
-        30: strength.strength_wo_30,
-        45: strength.strength_wo_45,
-        60: strength.strength_wo_60,
+        15: strength_weight.strength_wo_15,
+        30: strength_weight.strength_wo_30,
+        45: strength_weight.strength_wo_45,
+        60: strength_weight.strength_wo_60,
     },
     "cardio": {
         15: cardio.cardio_wo_15,
@@ -21,10 +21,10 @@ WORKOUTS = {
         60: cardio.cardio_wo_60,
     },
     "combo": {
-        15: combo.combot_wo_15,
-        30: combo.combot_wo_30,
-        45: combo.combot_wo_45,
-        60: combo.combot_wo_60,
+        15: combo.combo_wo_15,
+        30: combo.combo_wo_30,
+        45: combo.combo_wo_45,
+        60: combo.combo_wo_60,
     },
 }
 
@@ -51,7 +51,7 @@ def display_workout(focus, minutes, length, workout):
     """
     print workout title & each part on it's own line
     """
-    print(f"\your {focus} workout, estimated time to complete: {minutes}")
+    print(f"your {focus} workout, estimated time to complete: {minutes}")
     for entry in workout:
         for title, description in entry.items(): 
             print(f"\n {title.upper()}")

@@ -2,6 +2,8 @@
 command-line interface for the user to interact with the workkout app
 """
 
+from workout import pick_workout, display_workout
+
 # constants
 
 WO_FOCUS_LIST= ["strength", "cardio", "combo"]
@@ -80,9 +82,13 @@ def main():
             print("quitting program. goodbye!")
             return 
 
+        # getting workout 
+        tier, workout = pick_workout(wo_focus, minutes)
+        display_workout(wo_focus, minutes, tier, workout)
+        return
+
         print(f"\nworkout focus: {wo_focus}, duration: {minutes} minutes")
         return 
-
 
 if __name__ == "__main__":
     main()
