@@ -5,10 +5,16 @@ selects & displays workout
 - input time is rounded down to the neart quarter of an hour (ensures WO never exceeds time constraint)
 """
 
-from workouts import cardio, combo, strength_weight
+from workouts import cardio, combo, strength_weight, strength_bw
 
 WORKOUTS = {
-    "strength": {
+    "strength_bw": {
+        15: strength_bw.strength_wo_15, 
+        30: strength_bw.strength_wo_30,
+        45: strength_bw.strength_wo_45, 
+        60: strength_bw.strength_wo_60,
+    },
+    "strength_weight": {
         15: strength_weight.strength_wo_15,
         30: strength_weight.strength_wo_30,
         45: strength_weight.strength_wo_45,
@@ -47,11 +53,12 @@ def pick_workout(focus, minutes):
 
     return best_length, workout_focus[best_length]
 
-def display_workout(focus, minutes, length, workout):
+def display_workout(focus, length, workout):
     """
     print workout title & each part on it's own line
     """
-    print(f"your {focus} workout, estimated time to complete: {minutes}")
+    print(f"\nyour workout focus: {focus}")
+    print(f"estimated time to complete: {length} minutes")
     for entry in workout:
         for title, description in entry.items(): 
             print(f"\n {title.upper()}")
